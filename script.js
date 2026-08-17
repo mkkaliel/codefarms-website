@@ -1,256 +1,206 @@
 /* ===========================================================
    CODEFARMS TECHNOLOGY LIMITED
-   Official Website
+   Website Interactions — Brand v2
 =========================================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
 
     initNavigation();
-
     initReveal();
-
     initNetwork();
-
     initHeader();
+    initYear();
 
 });
 
-/* ===========================================================
-   MOBILE MENU
-=========================================================== */
+/* MOBILE MENU */
 
 function initNavigation(){
 
     const btn = document.getElementById("menuButton");
+    const nav = document.querySelector(".header nav");
 
-    const menu = document.getElementById("menu");
+    if(!btn || !nav) return;
 
-    if(!btn || !menu) return;
+    btn.addEventListener("click", () => {
 
-    btn.onclick = () =>{
+        nav.classList.toggle("mobile-open");
 
-        if(menu.style.display==="flex"){
+        btn.textContent = nav.classList.contains("mobile-open") ? "×" : "☰";
 
-            menu.style.display="none";
+    });
 
-        }else{
+    nav.querySelectorAll("a").forEach(link => {
 
-            menu.style.display="flex";
+        link.addEventListener("click", () => {
 
-            menu.style.flexDirection="column";
+            nav.classList.remove("mobile-open");
+            btn.textContent = "☰";
 
-            menu.style.position="absolute";
+        });
 
-            menu.style.top="82px";
-
-            menu.style.right="20px";
-
-            menu.style.background="#08111d";
-
-            menu.style.padding="25px";
-
-            menu.style.borderRadius="14px";
-
-            menu.style.boxShadow="0 20px 40px rgba(0,0,0,.35)";
-
-        }
-
-    };
+    });
 
 }
 
-/* ===========================================================
-   HEADER EFFECT
-=========================================================== */
+/* HEADER EFFECT */
 
 function initHeader(){
 
-    const header=document.querySelector(".header");
+    const header = document.querySelector(".header");
 
-    window.addEventListener("scroll",()=>{
+    if(!header) return;
 
-        if(window.scrollY>80){
+    function updateHeader(){
 
-            header.style.background="rgba(8,17,29,.95)";
+        if(window.scrollY > 60){
 
-            header.style.boxShadow="0 10px 30px rgba(0,0,0,.35)";
+            header.style.background = "rgba(4,12,8,.96)";
+            header.style.boxShadow = "0 10px 32px rgba(0,0,0,.28)";
 
         }else{
 
-            header.style.background="rgba(8,17,29,.72)";
-
-            header.style.boxShadow="none";
+            header.style.background = "rgba(6,16,13,.82)";
+            header.style.boxShadow = "none";
 
         }
 
-    });
+    }
+
+    window.addEventListener("scroll", updateHeader, {passive:true});
+    updateHeader();
 
 }
 
-/* ===========================================================
-   SCROLL REVEAL
-=========================================================== */
+/* SCROLL REVEAL */
 
 function initReveal(){
 
-    const sections=document.querySelectorAll(".section,.card");
+    const items = document.querySelectorAll(
+        ".section h2,.section-text,.card,.tech-grid span,.contact-box a,.philosophy-card"
+    );
 
-    sections.forEach(el=>{
+    items.forEach(el => el.classList.add("fade"));
 
-        el.classList.add("fade");
+    const observer = new IntersectionObserver(entries => {
 
-    });
-
-    const observer=new IntersectionObserver(entries=>{
-
-        entries.forEach(entry=>{
+        entries.forEach(entry => {
 
             if(entry.isIntersecting){
 
                 entry.target.classList.add("show");
+                observer.unobserve(entry.target);
 
             }
 
         });
 
-    },{
+    }, {threshold:.12});
 
-        threshold:.15
-
-    });
-
-    sections.forEach(el=>observer.observe(el));
+    items.forEach(el => observer.observe(el));
 
 }
 
-/* ===========================================================
-   HERO NETWORK ANIMATION
-=========================================================== */
+/* HERO NETWORK
+   Now uses Codefarms green instead of the old blue.
+*/
 
 function initNetwork(){
 
-    const holder=document.getElementById("networkCanvas");
+    const holder = document.getElementById("networkCanvas");
 
     if(!holder) return;
 
-    const canvas=document.createElement("canvas");
+    const canvas = document.createElement("canvas");
+    holder.replaceChildren(canvas);
 
-    holder.appendChild(canvas);
+    const ctx = canvas.getContext("2d");
 
-    const ctx=canvas.getContext("2d");
-
-    let w,h;
-
-    let particles=[];
+    let w = 0;
+    let h = 0;
+    let dpr = Math.min(window.devicePixelRatio || 1, 2);
+    let particles = [];
 
     function resize(){
 
-        w=holder.offsetWidth;
+        w = holder.clientWidth;
+        h = holder.clientHeight;
 
-        h=holder.offsetHeight;
+        canvas.width = Math.max(1, Math.floor(w * dpr));
+        canvas.height = Math.max(1, Math.floor(h * dpr));
 
-        canvas.width=w;
+        canvas.style.width = w + "px";
+        canvas.style.height = h + "px";
 
-        canvas.height=h;
+        ctx.setTransform(dpr,0,0,dpr,0,0);
 
     }
 
-    window.addEventListener("resize",resize);
-
+    window.addEventListener("resize", resize, {passive:true});
     resize();
 
     class Particle{
 
         constructor(){
-
             this.reset();
-
         }
 
         reset(){
 
-            this.x=Math.random()*w;
-
-            this.y=Math.random()*h;
-
-            this.vx=(Math.random()-.5)*0.5;
-
-            this.vy=(Math.random()-.5)*0.5;
-
-            this.r=2+Math.random()*2;
+            this.x = Math.random() * w;
+            this.y = Math.random() * h;
+            this.vx = (Math.random() - .5) * .32;
+            this.vy = (Math.random() - .5) * .32;
+            this.r = 1.3 + Math.random() * 1.8;
 
         }
 
         update(){
 
-            this.x+=this.vx;
+            this.x += this.vx;
+            this.y += this.vy;
 
-            this.y+=this.vy;
-
-            if(this.x<0||this.x>w) this.vx*=-1;
-
-            if(this.y<0||this.y>h) this.vy*=-1;
+            if(this.x < 0 || this.x > w) this.vx *= -1;
+            if(this.y < 0 || this.y > h) this.vy *= -1;
 
         }
 
         draw(){
 
             ctx.beginPath();
-
             ctx.arc(this.x,this.y,this.r,0,Math.PI*2);
-
-            ctx.fillStyle="rgba(96,165,250,.8)";
-
+            ctx.fillStyle = "rgba(105,239,103,.68)";
             ctx.fill();
 
         }
 
     }
 
-    for(let i=0;i<55;i++){
+    const particleCount = window.innerWidth < 700 ? 28 : 48;
 
+    for(let i=0; i<particleCount; i++){
         particles.push(new Particle());
-
     }
 
     function connect(){
 
-        for(let a=0;a<particles.length;a++){
+        for(let a=0; a<particles.length; a++){
 
-            for(let b=a+1;b<particles.length;b++){
+            for(let b=a+1; b<particles.length; b++){
 
-                let dx=particles[a].x-particles[b].x;
+                const dx = particles[a].x - particles[b].x;
+                const dy = particles[a].y - particles[b].y;
+                const dist = Math.sqrt(dx*dx + dy*dy);
 
-                let dy=particles[a].y-particles[b].y;
+                if(dist < 145){
 
-                let dist=Math.sqrt(dx*dx+dy*dy);
-
-                if(dist<150){
+                    const opacity = (1 - dist/145) * .18;
 
                     ctx.beginPath();
-
-                    ctx.moveTo(
-
-                        particles[a].x,
-
-                        particles[a].y
-
-                    );
-
-                    ctx.lineTo(
-
-                        particles[b].x,
-
-                        particles[b].y
-
-                    );
-
-                    ctx.strokeStyle="rgba(37,99,235,"+
-
-                        (1-dist/150)*0.25+
-
-                        ")";
-
+                    ctx.moveTo(particles[a].x,particles[a].y);
+                    ctx.lineTo(particles[b].x,particles[b].y);
+                    ctx.strokeStyle = `rgba(30,125,87,${opacity})`;
+                    ctx.lineWidth = 1;
                     ctx.stroke();
 
                 }
@@ -265,12 +215,9 @@ function initNetwork(){
 
         ctx.clearRect(0,0,w,h);
 
-        particles.forEach(p=>{
-
+        particles.forEach(p => {
             p.update();
-
             p.draw();
-
         });
 
         connect();
@@ -283,64 +230,47 @@ function initNetwork(){
 
 }
 
-/* ===========================================================
-   SMOOTH ACTIVE LINKS
-=========================================================== */
+/* SMOOTH INTERNAL LINKS */
 
-document.querySelectorAll('a[href^="#"]').forEach(link=>{
+document.querySelectorAll('a[href^="#"]').forEach(link => {
 
-    link.addEventListener("click",function(e){
+    link.addEventListener("click", function(e){
 
-        const id=this.getAttribute("href");
+        const id = this.getAttribute("href");
 
-        if(id==="#") return;
+        if(!id || id === "#") return;
 
-        const target=document.querySelector(id);
+        const target = document.querySelector(id);
 
         if(!target) return;
 
         e.preventDefault();
 
-        target.scrollIntoView({
+        const headerOffset = 76;
+        const top =
+            target.getBoundingClientRect().top +
+            window.pageYOffset -
+            headerOffset;
 
+        window.scrollTo({
+            top,
             behavior:"smooth"
-
         });
 
     });
 
 });
 
-/* ===========================================================
-   HERO BUTTON ANIMATION
-=========================================================== */
+/* YEAR */
 
-document.querySelectorAll(".btn").forEach(btn=>{
+function initYear(){
 
-    btn.addEventListener("mouseenter",()=>{
+    const year = document.getElementById("year");
 
-        btn.style.transform="translateY(-5px) scale(1.03)";
-
-    });
-
-    btn.addEventListener("mouseleave",()=>{
-
-        btn.style.transform="";
-
-    });
-
-});
-
-/* ===========================================================
-   YEAR
-=========================================================== */
-
-const year=document.getElementById("year");
-
-if(year){
-
-    year.textContent=new Date().getFullYear();
+    if(year){
+        year.textContent = new Date().getFullYear();
+    }
 
 }
 
-console.log("Codefarms website loaded successfully.");
+console.log("Codefarms brand v2 loaded.");

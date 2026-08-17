@@ -12,9 +12,11 @@
     <meta name="keywords"
           content="Codefarms,LudoWorld,Java,Flutter,WebSockets,AWS,AI,Software,Technology">
 
-    <meta name="theme-color" content="#0B3D2E">
+    <meta name="theme-color" content="#07110e">
 
-    <link rel="icon" type="image/svg+xml" href="assets/brand/codefarms-icon.svg">
+    <link rel="icon" type="image/png" sizes="64x64" href="assets/brand/codefarms-icon-64.png">
+    <link rel="apple-touch-icon" href="assets/brand/codefarms-icon-180.png">
+
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -24,10 +26,15 @@
     <div class="container nav">
 
         <a class="brand" href="#home" aria-label="Codefarms home">
-            <img src="assets/brand/codefarms-logo-dark.svg"
-                 alt="Codefarms"
-                 class="brand-logo">
-            <span class="brand-subtitle">Technology Limited</span>
+            <img
+                src="assets/brand/codefarms-seed.png"
+                alt=""
+                class="brand-icon"
+                aria-hidden="true">
+
+            <span class="brand-wordmark">
+                <span class="brand-code">code</span><span class="brand-farms">farms</span>
+            </span>
         </a>
 
         <nav>
@@ -41,11 +48,12 @@
             </ul>
         </nav>
 
-        <div id="menuButton">☰</div>
+        <button id="menuButton" type="button" aria-label="Open navigation">☰</button>
     </div>
 </header>
 
 <section class="hero" id="home">
+
     <div class="hero-background">
         <div id="networkCanvas"></div>
     </div>
@@ -63,10 +71,9 @@
             </h1>
 
             <p>
-                We cultivate ideas through engineering,
-                artificial intelligence and intelligent agents,
-                transforming innovation into digital products
-                that create lasting value.
+                We cultivate ideas through engineering, artificial intelligence
+                and intelligent agents, transforming innovation into digital
+                products that create lasting value.
             </p>
 
             <div class="hero-buttons">
@@ -88,42 +95,47 @@
             </div>
         </div>
 
-        <div class="hero-brand-mark" aria-hidden="true">
+        <div class="hero-brand">
 
-            <div class="hero-glow"></div>
+            <div class="seed-stage">
 
-            <img src="assets/brand/codefarms-icon.svg" alt="">
+                <div class="seed-aura"></div>
 
-            <div class="growth-path">
-                <span>Seed</span><b>→</b>
-                <span>Code</span><b>→</b>
-                <span>AI</span><b>→</b>
-                <span>Agents</span><b>→</b>
+                <img
+                    src="assets/brand/codefarms-seed.png"
+                    class="hero-seed"
+                    alt="Codefarms seed and circuit symbol">
+
+            </div>
+
+            <div class="growth-path" aria-label="Seed to products">
+                <span>Seed</span>
+                <b>→</b>
+                <span>Code</span>
+                <b>→</b>
+                <span>AI</span>
+                <b>→</b>
+                <span>Agents</span>
+                <b>→</b>
                 <span>Products</span>
             </div>
 
         </div>
 
     </div>
+
 </section>
 
 <section class="section">
     <div class="container">
-
         <p class="eyebrow">WHY WE EXIST</p>
-
         <h2>Our Mission</h2>
-
         <p class="section-text">
-            At Codefarms we believe technology should
-            connect people rather than isolate them.
+            At Codefarms we believe technology should connect people rather than isolate them.
 
-            Our focus is creating reliable,
-            scalable and innovative software that
-            delivers real-time experiences across
-            web, cloud and mobile platforms.
+            Our focus is creating reliable, scalable and innovative software that
+            delivers real-time experiences across web, cloud and mobile platforms.
         </p>
-
     </div>
 </section>
 
@@ -131,7 +143,6 @@
     <div class="container">
 
         <p class="eyebrow">FROM SEED TO PRODUCT</p>
-
         <h2>What We Build</h2>
 
         <p class="section-text">
@@ -143,28 +154,17 @@
         </p>
 
         <div class="cards">
-
             <div class="card featured-card">
-
                 <div class="icon">🎮</div>
-
                 <h3>LudoWorld</h3>
-
                 <p>
-                    A real-time multiplayer gaming
-                    platform supporting synchronized
-                    gameplay across web and mobile
-                    devices.
+                    A real-time multiplayer gaming platform supporting synchronized
+                    gameplay across web and mobile devices.
                 </p>
-
-                <a href="https://www.ludoworld.org"
-                   target="_blank"
-                   rel="noopener">
+                <a href="https://www.ludoworld.org" target="_blank" rel="noopener">
                     Visit LudoWorld →
                 </a>
-
             </div>
-
         </div>
 
     </div>
@@ -174,45 +174,30 @@
     <div class="container">
 
         <p class="eyebrow">SHARING THE ROOTS</p>
-
         <h2>Open Source</h2>
 
         <div class="cards">
 
             <div class="card">
-
                 <h3>Java WebSocket Room Manager</h3>
-
                 <p>
-                    A reusable room management
-                    library for Java WebSocket
-                    applications.
+                    A reusable room management library for Java WebSocket applications.
                 </p>
-
                 <a href="https://github.com/mkkaliel/java-websocket-room-manager"
-                   target="_blank"
-                   rel="noopener">
+                   target="_blank" rel="noopener">
                     View Repository →
                 </a>
-
             </div>
 
             <div class="card">
-
                 <h3>Multiplayer Architecture</h3>
-
                 <p>
-                    Documentation describing the
-                    architecture behind the
-                    LudoWorld multiplayer platform.
+                    Documentation describing the architecture behind the LudoWorld multiplayer platform.
                 </p>
-
                 <a href="https://github.com/mkkaliel/ludoworld-multiplayer-architecture"
-                   target="_blank"
-                   rel="noopener">
+                   target="_blank" rel="noopener">
                     View Repository →
                 </a>
-
             </div>
 
         </div>
@@ -224,7 +209,6 @@
     <div class="container">
 
         <p class="eyebrow">THE CULTIVATION STACK</p>
-
         <h2>Technology Stack</h2>
 
         <div class="tech-grid">
@@ -247,13 +231,14 @@
         <div class="philosophy-card">
 
             <div class="philosophy-icon">
-                <img src="assets/brand/codefarms-icon.svg" alt="" aria-hidden="true">
+                <img src="assets/brand/codefarms-seed.png"
+                     alt=""
+                     aria-hidden="true">
             </div>
 
             <div class="philosophy-copy">
 
                 <p class="eyebrow">OUR PHILOSOPHY</p>
-
                 <h2>Software is cultivated, not manufactured.</h2>
 
                 <p class="section-text philosophy-text">
@@ -286,7 +271,6 @@
     <div class="container">
 
         <p class="eyebrow">LET'S CULTIVATE SOMETHING</p>
-
         <h2>Contact</h2>
 
         <div class="contact-box">
@@ -299,9 +283,7 @@
                 </div>
             </a>
 
-            <a href="https://www.ludoworld.org"
-               target="_blank"
-               rel="noopener">
+            <a href="https://www.ludoworld.org" target="_blank" rel="noopener">
                 <span>🎮</span>
                 <div>
                     <small>Flagship Product</small>
@@ -309,9 +291,7 @@
                 </div>
             </a>
 
-            <a href="https://github.com/mkkaliel"
-               target="_blank"
-               rel="noopener">
+            <a href="https://github.com/mkkaliel" target="_blank" rel="noopener">
                 <span>💻</span>
                 <div>
                     <small>Open Source</small>
@@ -335,9 +315,12 @@
 <section class="section brand-statement">
     <div class="container">
 
-        <img src="assets/brand/codefarms-logo-dark.svg"
-             alt="Codefarms"
-             class="statement-logo">
+        <div class="statement-brand">
+            <img src="assets/brand/codefarms-seed.png" alt="" aria-hidden="true">
+            <div class="statement-wordmark">
+                <span class="brand-code">code</span><span class="brand-farms">farms</span>
+            </div>
+        </div>
 
         <h2>
             Cultivating Ideas.
@@ -358,20 +341,23 @@
 
         <div class="footer-brand">
 
-            <img src="assets/brand/codefarms-logo-dark.svg"
-                 alt="Codefarms"
-                 class="footer-logo">
+            <img src="assets/brand/codefarms-seed.png"
+                 alt=""
+                 class="footer-seed"
+                 aria-hidden="true">
 
-            <span>Technology Limited</span>
+            <div>
+                <div class="footer-wordmark">
+                    <span class="brand-code">code</span><span class="brand-farms">farms</span>
+                </div>
+                <span class="footer-limited">Technology Limited</span>
+            </div>
 
         </div>
 
         <div class="footer-copy">
-
-            <p>© 2026 Codefarms Technology Limited</p>
-
+            <p>© <span id="year">2026</span> Codefarms Technology Limited</p>
             <p>Cultivating Ideas. Harvesting Innovation.</p>
-
         </div>
 
     </div>
