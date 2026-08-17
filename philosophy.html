@@ -12,209 +12,129 @@
     <meta name="keywords"
           content="Codefarms,LudoWorld,Java,Flutter,WebSockets,AWS,AI,Software,Technology">
 
-    <meta name="theme-color" content="#08111d">
+    <meta name="theme-color" content="#07110e">
+
+    <link rel="icon" type="image/png" sizes="64x64" href="assets/brand/codefarms-icon-64.png">
+    <link rel="apple-touch-icon" href="assets/brand/codefarms-icon-180.png">
 
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-
-<!-- ================= NAVIGATION ================= -->
+<body class="philosophy-page">
 
 <header class="header">
-
     <div class="container nav">
-
-        <div class="logo">
-
-            <div class="logo-circle">
-                C
-            </div>
-
-            <div class="logo-text">
-
-                <span class="company">
-                    CODEFARMS
-                </span>
-
-                <span class="subtitle">
-                    Technology Limited
-                </span>
-
-            </div>
-
-        </div>
+        <a class="brand" href="index.html" aria-label="Codefarms home">
+            <img src="assets/brand/codefarms-seed.png" alt="" class="brand-icon" aria-hidden="true">
+            <span class="brand-wordmark">
+                <span class="brand-code">code</span><span class="brand-farms">farms</span>
+            </span>
+        </a>
 
         <nav>
-
             <ul id="menu">
-
                 <li><a href="index.html">Home</a></li>
-
                 <li><a href="#philosophy">Our Philosophy</a></li>
-
                 <li><a href="#opensource">Open Source</a></li>
-
                 <li><a href="#contact">Contact</a></li>
-
             </ul>
-
         </nav>
 
-        <div id="menuButton">
-
-            ☰
-
-        </div>
-
+        <button id="menuButton" type="button" aria-label="Open navigation">☰</button>
     </div>
-
 </header>
 
-<!-- ================= HERO ================= -->
-
-<section class="Philosophy Hero" id="philosophy">
-
-  <div class="container hero-content">
-  
-    <p class="small-title">
-    
-      THE CODEFARMS PHILOSOPHY
-    
-    </p>
-    
-    <h1>
-    
-      We Don't Just Build Software.
-    
-    <br>
-    
-      We Cultivate It.
-    
-    </h1>
-    
-    <p>
-    
-      Every product begins as a seed.
-    
-      Every harvest plants the future.
-    
-    </p>
-  
-  </div>
-
-</section>
-
-  <!-- ================= Manifesto ================= -->
-
-<section class="section">
-
-    <div class="container">
-
-        <h2>
-
-            Our Manifesto
-
-        </h2>
-
-        <p class="section-text">
-
-            The Codefarms Manifesto
-            
-            We Don’t Just Build Software. We Cultivate It.
-            
-            At Codefarms, we believe the world’s greatest technology is not manufactured—it is cultivated.
-            
-            Every transformative product begins as a seed:
-            
-            an idea,
-            
-            a question,
-            
-            a challenge waiting to be solved.
-            
-            We prepare the soil through engineering.
-            
-            We nurture innovation with code.
-            
-            We accelerate growth through artificial intelligence.
-            
-            We orchestrate intelligent agents to cultivate ideas into products that create lasting value.
-            
-            Our products are not isolated creations.
-            
-            They are part of a living ecosystem where every innovation becomes the seed for the next generation of ideas.
-            
-            Artificial intelligence is not here to replace human creativity.
-            
-            It is the modern machinery of our digital farm—
-            
-            preparing,
-            
-            cultivating,
-            
-            learning,
-            
-            optimizing,
-            
-            and accelerating the journey from imagination to reality.
-            
-            We believe technology should grow alongside humanity.
-            
-            We measure success not by the amount of code we write,
-            
-            but by the value our products create.
-            
-            Every line of code is planted with purpose.
-            
-            Every intelligent agent is cultivated with responsibility.
-            
-            Every product is harvested to solve real problems.
-            
-            Every harvest plants the seeds for tomorrow.
-
-        </p>
-        <h2>
-        
-            This is Codefarms.
-        
-        </h2>
-        
-        <h3>
-        
-            Where ideas are cultivated.
-        
-        </h3>
-        
-        <h3>
-        
-            Where intelligence grows.
-        
-        </h3>
-        
-        <h3>
-        
-            Where products are harvested.
-        
-        </h3>
+<section class="philosophy-page-hero" id="philosophy">
+    <div class="philosophy-hero-network">
+        <div id="networkCanvas"></div>
     </div>
 
+    <div class="container philosophy-hero-grid">
+        <div class="philosophy-hero-copy">
+            <p class="small-title">THE CODEFARMS PHILOSOPHY</p>
+
+            <h1>
+                We Don't Just Build Software.
+                <br>
+                <span>We Cultivate It.</span>
+            </h1>
+
+            <p>
+                Every product begins as a seed.
+                Every harvest plants the future.
+            </p>
+        </div>
+
+        <div class="philosophy-hero-mark" aria-hidden="true">
+            <div class="seed-aura"></div>
+            <img src="assets/brand/codefarms-seed.png" alt="" class="philosophy-seed">
+        </div>
+    </div>
 </section>
-  
-<!-- ================= MISSION ================= -->
 
-<section class="section">
-
+<section class="section manifesto-section">
     <div class="container">
+        <p class="eyebrow">THE CODEFARMS MANIFESTO</p>
+        <h2>Our Manifesto</h2>
 
-        <h2>
+        <div class="manifesto-card">
+            <p class="manifesto-title">The Codefarms Manifesto</p>
+            <p class="manifesto-lead">We Don’t Just Build Software. We Cultivate It.</p>
 
-            Our Mission
+            <div class="manifesto-copy">
+                <p>At Codefarms, we believe the world’s greatest technology is not manufactured—it is cultivated.</p>
 
-        </h2>
+                <p>Every transformative product begins as a seed:</p>
+
+                <p class="manifesto-sequence">
+                    an idea,<br>
+                    a question,<br>
+                    a challenge waiting to be solved.
+                </p>
+
+                <p>We prepare the soil through engineering.</p>
+                <p>We nurture innovation with code.</p>
+                <p>We accelerate growth through artificial intelligence.</p>
+                <p>We orchestrate intelligent agents to cultivate ideas into products that create lasting value.</p>
+                <p>Our products are not isolated creations.</p>
+                <p>They are part of a living ecosystem where every innovation becomes the seed for the next generation of ideas.</p>
+                <p>Artificial intelligence is not here to replace human creativity.</p>
+                <p>It is the modern machinery of our digital farm—</p>
+
+                <p class="manifesto-sequence">
+                    preparing,<br>
+                    cultivating,<br>
+                    learning,<br>
+                    optimizing,<br>
+                    and accelerating the journey from imagination to reality.
+                </p>
+
+                <p>We believe technology should grow alongside humanity.</p>
+                <p>We measure success not by the amount of code we write, but by the value our products create.</p>
+                <p>Every line of code is planted with purpose.</p>
+                <p>Every intelligent agent is cultivated with responsibility.</p>
+                <p>Every product is harvested to solve real problems.</p>
+                <p>Every harvest plants the seeds for tomorrow.</p>
+            </div>
+
+            <div class="manifesto-ending">
+                <img src="assets/brand/codefarms-seed.png" alt="" aria-hidden="true">
+
+                <h2>This is Codefarms.</h2>
+                <h3>Where ideas are cultivated.</h3>
+                <h3>Where intelligence grows.</h3>
+                <h3>Where products are harvested.</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section dark">
+    <div class="container">
+        <p class="eyebrow">WHY WE EXIST</p>
+        <h2>Our Mission</h2>
 
         <p class="section-text">
-
             At Codefarms we believe technology should
             connect people rather than isolate them.
 
@@ -222,155 +142,77 @@
             scalable and innovative software that
             delivers real-time experiences across
             web, cloud and mobile platforms.
-
         </p>
-
     </div>
-
 </section>
-
-
-<!-- ================= OPEN SOURCE ================= -->
 
 <section class="section" id="opensource">
-
     <div class="container">
-
-        <h2>
-
-            Open Source
-
-        </h2>
+        <p class="eyebrow">SHARING THE ROOTS</p>
+        <h2>Open Source</h2>
 
         <div class="cards">
-
             <div class="card">
-
-                <h3>
-
-                    Java WebSocket Room Manager
-
-                </h3>
-
-                <p>
-
-                    A reusable room management
-                    library for Java WebSocket
-                    applications.
-
-                </p>
-
-                <a
-                        href="https://github.com/mkkaliel/java-websocket-room-manager"
-                        target="_blank">
-
-                    View Repository →
-
-                </a>
-
+                <h3>Java WebSocket Room Manager</h3>
+                <p>A reusable room management library for Java WebSocket applications.</p>
+                <a href="https://github.com/mkkaliel/java-websocket-room-manager" target="_blank" rel="noopener">View Repository →</a>
             </div>
 
             <div class="card">
-
-                <h3>
-
-                    Multiplayer Architecture
-
-                </h3>
-
-                <p>
-
-                    Documentation describing the
-                    architecture behind the
-                    LudoWorld multiplayer platform.
-
-                </p>
-
-                <a
-                        href="https://github.com/mkkaliel/ludoworld-multiplayer-architecture"
-                        target="_blank">
-
-                    View Repository →
-
-                </a>
-
+                <h3>Multiplayer Architecture</h3>
+                <p>Documentation describing the architecture behind the LudoWorld multiplayer platform.</p>
+                <a href="https://github.com/mkkaliel/ludoworld-multiplayer-architecture" target="_blank" rel="noopener">View Repository →</a>
             </div>
-
         </div>
-
     </div>
-
 </section>
 
-
-<!-- ================= CONTACT ================= -->
-
 <section class="section dark" id="contact">
-
     <div class="container">
-
-        <h2>
-
-            Contact
-
-        </h2>
+        <p class="eyebrow">LET'S CULTIVATE SOMETHING</p>
+        <h2>Contact</h2>
 
         <div class="contact-box">
+            <a href="https://codefarms.net">
+                <span>🌍</span>
+                <div><small>Website</small><strong>codefarms.net</strong></div>
+            </a>
 
-            <p>
+            <a href="https://www.ludoworld.org" target="_blank" rel="noopener">
+                <span>🎮</span>
+                <div><small>Flagship Product</small><strong>ludoworld.org</strong></div>
+            </a>
 
-                🌍
+            <a href="https://github.com/mkkaliel" target="_blank" rel="noopener">
+                <span>💻</span>
+                <div><small>Open Source</small><strong>github.com/mkkaliel</strong></div>
+            </a>
 
-                https://codefarms.net
-
-            </p>
-
-            <p>
-
-                🎮
-
-                https://www.ludoworld.org
-
-            </p>
-
-            <p>
-
-                💻
-
-                https://github.com/mkkaliel
-
-            </p>
-
-            <p>
-
-                📧
-
-                admin@codefarms.net
-
-            </p>
-
+            <a href="mailto:admin@codefarms.net">
+                <span>📧</span>
+                <div><small>Email</small><strong>admin@codefarms.net</strong></div>
+            </a>
         </div>
-
     </div>
-    
-<!-- ================= FOOTER ================= -->
+</section>
 
 <footer>
-
     <div class="container footer">
+        <div class="footer-brand">
+            <img src="assets/brand/codefarms-seed.png" alt="" class="footer-seed" aria-hidden="true">
+            <div>
+                <div class="footer-wordmark">
+                    <span class="brand-code">code</span><span class="brand-farms">farms</span>
+                </div>
+                <span class="footer-limited">Technology Limited</span>
+            </div>
+        </div>
 
-        <p>
-
-            © 2026 Codefarms Technology Limited
-
-        </p>
-
-        <p>
-            Cultivating Ideas. Harvesting Innovation.
-        </p>
-
+        <div class="footer-copy">
+            <p>© <span id="year">2026</span> Codefarms Technology Limited</p>
+            <p>Cultivating Ideas. Harvesting Innovation.</p>
+        </div>
     </div>
-
 </footer>
 
 <script src="script.js"></script>
