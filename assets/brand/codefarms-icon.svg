@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 260" role="img" aria-labelledby="title">
+<title id="title">Codefarms seed icon</title>
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#0B3D2E"/><stop offset=".55" stop-color="#1E7D57"/><stop offset="1" stop-color="#7DFF72"/>
+</linearGradient></defs>
+<g transform="translate(12,4)" fill="none" stroke="url(#g)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+<path d="M88 54 C45 66 24 103 30 143"/><path d="M157 64 C184 88 193 119 185 149"/>
+<path d="M92 61 C112 69 123 87 121 108"/><path d="M123 89 C136 62 156 48 183 43 C181 69 168 89 143 102"/>
+<path d="M118 108 C92 122 80 148 87 176 C94 198 113 210 130 210 C151 210 169 194 175 173 C181 146 166 119 137 107"/>
+<path d="M104 202 V220 H74 V229"/><path d="M121 209 V232"/><path d="M138 208 V220 H166 V229"/>
+<path d="M93 196 L72 212 H45 V225"/><path d="M150 196 L170 212 H197 V225"/>
+<circle cx="74" cy="232" r="5" fill="#7DFF72" stroke="none"/><circle cx="121" cy="235" r="6" fill="#7DFF72" stroke="none"/>
+<circle cx="166" cy="232" r="5" fill="#7DFF72" stroke="none"/><circle cx="45" cy="228" r="5" fill="#7DFF72" stroke="none"/>
+<circle cx="197" cy="228" r="5" fill="#7DFF72" stroke="none"/>
+</g></svg>
